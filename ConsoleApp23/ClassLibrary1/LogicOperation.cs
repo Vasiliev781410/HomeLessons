@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace ConsoleApp23
+namespace ClassLibrary1
 {
     public class LogicOperation
     {
@@ -16,7 +16,7 @@ namespace ConsoleApp23
         public static void DateBeginSet()
         {
             DateBegin = DateTime.Today;
-            CurrentDate = DateTime.Today;         
+            CurrentDate = DateTime.Today;
         }
 
         static object locker = new object();
@@ -32,8 +32,8 @@ namespace ConsoleApp23
         public static void CountWearout()
         {
             foreach (FixedAssets asset in LogicOperation.assets)
-            {                
-                TimeSpan diff =  CurrentDate - asset.DateBeginExpl;
+            {
+                TimeSpan diff = CurrentDate - asset.DateBeginExpl;
                 double days = diff.TotalDays;
                 if (days < asset.ServiceTimeD)
                 {
@@ -44,7 +44,7 @@ namespace ConsoleApp23
                     asset.StillDays = 0;
                 }
             }
-         }
+        }
         public static void OrderAsset()
         {
             foreach (FixedAssets asset in LogicOperation.assets)
@@ -55,7 +55,7 @@ namespace ConsoleApp23
                 {
                     if (days / asset.ServiceTimeD * 100 > 70)
                     {
-                        asset.Name.WriteExpr();
+                        Console.WriteLine("Необходимо заказать {0}", asset.Name);
                     }
                 }
             }
@@ -67,13 +67,13 @@ namespace ConsoleApp23
 
             foreach (FixedAssets asset in LogicOperation.assets)
             {
-                Console.WriteLine("Основное средство {0} осталось эксплуатировать {1}",asset.Name, asset.StillDays.ToString());
+                Console.WriteLine("Основное средство {0} осталось эксплуатировать {1}", asset.Name, asset.StillDays.ToString());
             }
         }
 
         public static void AddList(FixedAssets obj)
         {
             assets.Add(obj);
-        }      
+        }
     }
 }

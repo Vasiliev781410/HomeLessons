@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp23
+namespace ConsoleApp1
 {
-    public static class AddMethods
+    class Program
     {
-        public static void WriteExpr(this string str)
+        static void Main(string[] args)
         {
-            Console.WriteLine(str);
         }
     }
 }

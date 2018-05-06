@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ConsoleApp23
 {
-    class WorkWithUserData
+    class WorkWithUserData1
     {
         public delegate int Transformed(string str);
         static object locker = new object();
@@ -56,28 +57,28 @@ namespace ConsoleApp23
                             switch (result)
                             {
                                 case 1:
-                                    Computers comp = Computers.NewAsset(name, day, LogicOperation.CurrentDate);
-                                    LogicOperation.AddList(comp);
+                                    ClassLibrary1.Computers comp = ClassLibrary1.Computers.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.LogicOperation.AddList(comp);
                                     break;
                                 case 2:
-                                    MachineTools mash = MachineTools.NewAsset(name, day, LogicOperation.CurrentDate);
-                                    LogicOperation.AddList(mash);
+                                    ClassLibrary1.MachineTools mash = ClassLibrary1.MachineTools.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.LogicOperation.AddList(mash);
                                     break;
                                 case 3:
-                                    Furnitures furn = Furnitures.NewAsset(name, day, LogicOperation.CurrentDate);
-                                    LogicOperation.AddList(furn);
+                                    ClassLibrary1.Furnitures furn = ClassLibrary1.Furnitures.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.LogicOperation.AddList(furn);
                                     break;
                                 case 4:
-                                    Appliances appliance = Appliances.NewAsset(name, day, LogicOperation.CurrentDate);
-                                    LogicOperation.AddList(appliance);
+                                    ClassLibrary1.Appliances appliance = ClassLibrary1.Appliances.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.LogicOperation.AddList(appliance);
                                     break;
                                 case 5:
-                                    Autotrucks auto = Autotrucks.NewAsset(name, day, LogicOperation.CurrentDate);
-                                    LogicOperation.AddList(auto);
+                                    ClassLibrary1.Autotrucks auto = ClassLibrary1.Autotrucks.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.LogicOperation.AddList(auto);
                                     break;
                                 case 6:
-                                    Cars car = Cars.NewAsset(name, day, LogicOperation.CurrentDate);
-                                    LogicOperation.AddList(car);
+                                    ClassLibrary1.Cars car = ClassLibrary1.Cars.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.LogicOperation.AddList(car);
                                     break;
                             }
                             "Данные по основнму средству записаны. Для продолжения нажмите Enter".WriteExpr();
@@ -88,8 +89,8 @@ namespace ConsoleApp23
                         else if (result == 7)
                         {
                             Console.Clear();
-                            LogicOperation.CountWearout();
-                            LogicOperation.ListAssets();
+                            ClassLibrary1.LogicOperation.CountWearout();
+                            ClassLibrary1.LogicOperation.ListAssets();
                             "Для продолжения нажмите Enter".WriteExpr();
                             Console.ReadKey();
                             Console.Clear();
@@ -98,7 +99,7 @@ namespace ConsoleApp23
                         else if (result == 8)
                         {
                             Console.Clear();
-                            LogicOperation.OrderAsset();
+                            ClassLibrary1.LogicOperation.OrderAsset();
                             "Для продолжения нажмите Enter".WriteExpr();
                             Console.ReadKey();
                             Console.Clear();

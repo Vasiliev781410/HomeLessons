@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp23
+namespace ClassLibrary1
 {
     // абстрактный класс Основные фонды
     public abstract class FixedAssets
@@ -17,11 +17,11 @@ namespace ConsoleApp23
     }
 
     // 1. Абстр. класс Оборудование
-    abstract class Equipments : FixedAssets
+    public abstract class Equipments : FixedAssets
     {
     }
     //// 1.1.Класс компьютеры абстр. класса Оборудование (1)
-    class Computers : Equipments
+    public class Computers : Equipments
     {
         public static Computers NewAsset(string name, int servDay, DateTime date)
         {
@@ -34,7 +34,7 @@ namespace ConsoleApp23
         }
     }
     //// 1.2 Класс станки абстр. класса Оборудование (2)
-    class MachineTools : Equipments
+    public class MachineTools : Equipments
     {
         public static MachineTools NewAsset(string name, int servDay, DateTime date)
         {
@@ -49,11 +49,11 @@ namespace ConsoleApp23
     }
 
     // 2. Абстр. класс Приборы и инвентарь
-    abstract class Inventory : FixedAssets
+    public abstract class Inventory : FixedAssets
     {
     }
     //// 2.1.Класс мебель абстр. класса Приборы и инвентарь (3)
-    class Furnitures : Inventory
+    public class Furnitures : Inventory
     {
         public static Furnitures NewAsset(string name, int servDay, DateTime date)
         {
@@ -66,7 +66,7 @@ namespace ConsoleApp23
         }
     }
     //// 2.2 Класс приборы абстр. класса Приборы и инвентарь (4)
-    class Appliances : Inventory
+    public class Appliances : Inventory
     {
         public static Appliances NewAsset(string name, int servDay, DateTime date)
         {
@@ -80,11 +80,11 @@ namespace ConsoleApp23
     }
 
     // 3. Абстр. класс Траснпорт
-    abstract class Transport : FixedAssets
+    public abstract class Transport : FixedAssets
     {
     }
     //// 3.1.Класс Грузовики абстр. класса Траснпорт (5)
-    class Autotrucks : Transport
+    public class Autotrucks : Transport
     {
         public static Autotrucks NewAsset(string name, int servDay, DateTime date)
         {
@@ -97,17 +97,17 @@ namespace ConsoleApp23
         }
     }
     //// 3.2 Класс Легковые авто абстр. класса Траснпорт (6)
-    class Cars : Transport
+    public class Cars : Transport
     {
         public static Cars NewAsset(string name, int servDay, DateTime date)
         {
             Cars asset = new Cars();
             asset.Name = name;
-            asset.ServiceTimeD = servDay;  
+            asset.ServiceTimeD = servDay;
             asset.DateBeginExpl = date;
 
             return asset;
         }
     }
-    
+
 }

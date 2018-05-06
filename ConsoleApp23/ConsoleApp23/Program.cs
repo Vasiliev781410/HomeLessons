@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
+
+
 namespace ConsoleApp23
 {
 
@@ -16,17 +18,20 @@ namespace ConsoleApp23
         static void Main(string[] args)
         {
             //1. Установим начальную дату
-            LogicOperation.DateBeginSet();
+            ClassLibrary1.LogicOperation.DateBeginSet();
+            
             //2. Запустим отсчет
             while (true)
             {
                 
-                Thread thread = new Thread(LogicOperation.DateCurrentSet);
+                Thread thread = new Thread(ClassLibrary1.LogicOperation.DateCurrentSet);
+                
                 thread.Name = "thread1";
                 thread.Start();
                 Thread.Sleep(2000);
 
-                Thread thread1 = new Thread(WorkWithUserData.WorkWithUserDataMain);
+                
+                Thread thread1 = new Thread(WorkWithUserData1.WorkWithUserDataMain);                
                 thread1.Name = "thread2";
                 thread1.Start();
 
