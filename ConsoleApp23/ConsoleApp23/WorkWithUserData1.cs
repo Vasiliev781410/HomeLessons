@@ -57,27 +57,33 @@ namespace ConsoleApp23
                             switch (result)
                             {
                                 case 1:
-                                    ClassLibrary1.Computers comp = ClassLibrary1.Computers.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.Computers Asset1 = new ClassLibrary1.Computers();
+                                    ClassLibrary1.Computers comp = Asset1.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
                                     ClassLibrary1.LogicOperation.AddList(comp);
                                     break;
                                 case 2:
-                                    ClassLibrary1.MachineTools mash = ClassLibrary1.MachineTools.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.MachineTools Asset2 = new ClassLibrary1.MachineTools();
+                                    ClassLibrary1.MachineTools mash = Asset2.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
                                     ClassLibrary1.LogicOperation.AddList(mash);
                                     break;
                                 case 3:
-                                    ClassLibrary1.Furnitures furn = ClassLibrary1.Furnitures.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.Furnitures Asset3 = new ClassLibrary1.Furnitures();
+                                    ClassLibrary1.Furnitures furn = Asset3.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
                                     ClassLibrary1.LogicOperation.AddList(furn);
                                     break;
                                 case 4:
-                                    ClassLibrary1.Appliances appliance = ClassLibrary1.Appliances.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.Appliances Asset4 = new ClassLibrary1.Appliances();
+                                    ClassLibrary1.Appliances appliance = Asset4.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
                                     ClassLibrary1.LogicOperation.AddList(appliance);
                                     break;
                                 case 5:
-                                    ClassLibrary1.Autotrucks auto = ClassLibrary1.Autotrucks.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.Autotrucks Asset5 = new ClassLibrary1.Autotrucks();
+                                    ClassLibrary1.Autotrucks auto = Asset5.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
                                     ClassLibrary1.LogicOperation.AddList(auto);
                                     break;
                                 case 6:
-                                    ClassLibrary1.Cars car = ClassLibrary1.Cars.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
+                                    ClassLibrary1.Cars Asset6 = new ClassLibrary1.Cars();
+                                    ClassLibrary1.Cars car = Asset6.NewAsset(name, day, ClassLibrary1.LogicOperation.CurrentDate);
                                     ClassLibrary1.LogicOperation.AddList(car);
                                     break;
                             }

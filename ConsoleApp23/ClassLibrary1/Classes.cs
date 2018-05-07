@@ -23,7 +23,7 @@ namespace ClassLibrary1
     //// 1.1.Класс компьютеры абстр. класса Оборудование (1)
     public class Computers : Equipments
     {
-        public static Computers NewAsset(string name, int servDay, DateTime date)
+        public Computers NewAsset(string name, int servDay, DateTime date)
         {
             Computers asset = new Computers();
             asset.Name = name;
@@ -36,7 +36,7 @@ namespace ClassLibrary1
     //// 1.2 Класс станки абстр. класса Оборудование (2)
     public class MachineTools : Equipments
     {
-        public static MachineTools NewAsset(string name, int servDay, DateTime date)
+        public MachineTools NewAsset(string name, int servDay, DateTime date)
         {
             MachineTools asset = new MachineTools();
             asset.Name = name;
@@ -55,7 +55,7 @@ namespace ClassLibrary1
     //// 2.1.Класс мебель абстр. класса Приборы и инвентарь (3)
     public class Furnitures : Inventory
     {
-        public static Furnitures NewAsset(string name, int servDay, DateTime date)
+        public Furnitures NewAsset(string name, int servDay, DateTime date)
         {
             Furnitures asset = new Furnitures();
             asset.Name = name;
@@ -68,7 +68,7 @@ namespace ClassLibrary1
     //// 2.2 Класс приборы абстр. класса Приборы и инвентарь (4)
     public class Appliances : Inventory
     {
-        public static Appliances NewAsset(string name, int servDay, DateTime date)
+        public Appliances NewAsset(string name, int servDay, DateTime date)
         {
             Appliances asset = new Appliances();
             asset.Name = name;
@@ -86,7 +86,7 @@ namespace ClassLibrary1
     //// 3.1.Класс Грузовики абстр. класса Траснпорт (5)
     public class Autotrucks : Transport
     {
-        public static Autotrucks NewAsset(string name, int servDay, DateTime date)
+        public Autotrucks NewAsset(string name, int servDay, DateTime date)
         {
             Autotrucks asset = new Autotrucks();
             asset.Name = name;
@@ -99,7 +99,7 @@ namespace ClassLibrary1
     //// 3.2 Класс Легковые авто абстр. класса Траснпорт (6)
     public class Cars : Transport
     {
-        public static Cars NewAsset(string name, int servDay, DateTime date)
+        public Cars NewAsset(string name, int servDay, DateTime date)
         {
             Cars asset = new Cars();
             asset.Name = name;
